@@ -1,4 +1,4 @@
-lwip-tap
+# lwip-tap
 
 lwip-tap is an application of "lwIP - A Lightweight TCP/IP Stack" which is
 a small, user-space implementation of the TCP/IP protocol stack.
@@ -8,7 +8,7 @@ interfaces, so that it also works as a router. A wide range of different
 network topologies can be built flexibly.
 
 
-1. System Requirement
+## System Requirement
 
 As of now, lwip-tap has been developed only in Linux, more precisely Arch
 Linux with latest updates. The original tapif driver available in the
@@ -18,7 +18,7 @@ work on any environment that supports TAP/TUN-like devices if the tapif
 driver is updated.
 
 
-2. Build
+## Building
 
 Clone the git repository from GitHub and initialize submodules,
 
@@ -27,15 +27,15 @@ Clone the git repository from GitHub and initialize submodules,
   $ git submodule init
   $ git submodule update
 
-GNU make is required to build lwip-tap. A compile-time option to enable
+CMake is required to build lwip-tap. A compile-time option to enable
 debugging facilities lwIP provides is available. See "8. Debugging" below.
 
-  $ ./configure
-  $ make
+```shell
+cmake -B build -S. -GNinja
+cmake --build build
+```
 
-Makefile currently does not have install targets. lwip-tap works in-place
-in the source directory. Copy it to anywhere if you like.
-
+## Running
 
 3. Example: Running lwip-tap with a transient TAP device
 
