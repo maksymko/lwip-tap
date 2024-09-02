@@ -34,11 +34,11 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include "lwip/tcpip.h"
-#include "chargen.h"
-#include "httpserver-netconn.h"
+#include "chargen/chargen.h"
+#include "httpserver/httpserver-netconn.h"
 #include "tapif.h"
-#include "tcpecho.h"
-#include "udpecho.h"
+#include "tcpecho/tcpecho.h"
+#include "udpecho/udpecho.h"
 
 /* exported in lwipopts.h */
 unsigned char debug_flags = LWIP_DBG_OFF;
