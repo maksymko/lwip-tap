@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(Threads REQUIRED)
 
-add_compile_options(-Wall -fdiagnostics-color=always)
+add_compile_options(-Wall -Wextra -fdiagnostics-color=always)
 
 include(lwip_libs.cmake)
 
