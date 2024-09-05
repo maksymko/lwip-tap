@@ -31,3 +31,6 @@ target_link_libraries(lwip-tap
     lwip_contrib_apps
     lwip_unix
 )
+
+add_subdirectory(unittest)
+add_subdirectory(thirdparty/catch2)

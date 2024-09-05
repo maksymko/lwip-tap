@@ -4,3 +4,6 @@
 [submodule "lwip-contrib"]
 	path = thirdparty/lwip-contrib
 	url = git://git.savannah.nongnu.org/lwip/lwip-contrib.git
+[submodule "thirdparty/catch2"]
+	path = thirdparty/catch2
+	url = git@github.com:catchorg/Catch2.git
