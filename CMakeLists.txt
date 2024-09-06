@@ -10,6 +10,12 @@ add_compile_options(-Wall -Wextra -fdiagnostics-color=always)
 
 include(lwip_libs.cmake)
 
+add_library(taplib STATIC taplib/utils.c)
+target_include_directories(taplib
+    PUBLIC
+    ${CMAKE_SOURCE_DIR}
+)
+
 add_library(my_tapif STATIC tapif.c)
 target_include_directories(my_tapif
     PUBLIC
